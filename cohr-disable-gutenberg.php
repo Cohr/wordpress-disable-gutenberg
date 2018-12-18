@@ -4,7 +4,7 @@
  * Plugin URI: https://www.github.com/Cohr/wordpress-disable-gutenberg
  * GitHub URI: Cohr/wordpress-disable-gutenberg
  * Description: WordPress 5.0+ utilises a new content editor: Gutenberg. This plugin reenables the original content editor.
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      Cohr
  * Author URI:  https://cohr.nz
  *
@@ -39,3 +39,6 @@
 // Disable Gutenberg
 add_filter( 'gutenberg_can_edit_post_type', '__return_false' );
 add_filter( 'use_block_editor_for_post_type', '__return_false' );
+
+// In case updates and modifications are required include GitHub updater
+include( dirname( __FILE__ ) . '/github-updater.php' );
